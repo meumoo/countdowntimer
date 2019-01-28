@@ -73,7 +73,7 @@
 				timerDiv.innerHTML = 'Loading...';
 				codenameFromServer.innerHTML = 'Loading...';
 				//	Codes here
-				var ws = io.connect('http://10.192.21.47:8081');
+				var ws = io.connect('/');
 				ws.on('countdown', (data) => {
 					codenameFromServer.innerHTML = '(Timer Countdown Updated by: ' + (data.codename + '').toUpperCase() + ')';
 					if (data.notes)
